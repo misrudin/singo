@@ -1,46 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('front/css/style.css')}}" rel="stylesheet">
-    <title>Singo</title>
-</head>
-<body>
-<!--nav-->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="{{asset('front/assets/logo.svg')}}" alt="" width="128" height="46"
-                 class="d-inline-block align-text-top">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Beranda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profil NGO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Berita</a>
-                </li>
-            </ul>
-            <form class="ms-3 p-0">
-                <button class="btn btn-primary" type="button">Masuk</button>
-            </form>
-        </div>
-    </div>
-  </nav>
-<!--nav end-->
+@section('header')
+    @include('layout.header')
+@show
 
 <!--banner-->
 <section style="background-image: url(front/assets/images/bg_banner.png)" class="banner d-flex align-items-center">
@@ -208,10 +168,13 @@
 <section class="news">
     <div class="container">
         <div class="row row-cols-2 g-5">
-            <div class="col-md-8">
+            <div class="col-md-8"> 
                 <h5 class="title">Berita</h5>
+                <?php 
+                $ulangi = 0;
+                while ($ulangi < 3){ $ulangi++;?>
                 <div class="news-item mt-5">
-                    <img src="assets/news/news1.png" alt="News">
+                    <img src="{{asset('front/assets/news/news1.png')}}" alt="News">
                     <div class="news-detail">
                         <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
                             dui</h5>
@@ -222,110 +185,29 @@
                             Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
                             ultricies...</p>
                         <a class="news-cta mt-2" href="#">Baca selengkapnya <img src="{{asset('front/assets/icons/right.png')}}"
-                                                                                 alt="Selengkapnya"></a>
+                                                                                 alt="Selengkapnya"></a>                                                                                                               
                     </div>
                 </div>
-                <div class="news-item mt-5">
-                    <img src="{{asset('front/assets/news/news2.png')}}" alt="News">
-                    <div class="news-detail">
-                        <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
-                            dui</h5>
-                        <p class="news-date mt-2">2 April 2021</p>
-                        <p class="news-meta mt-2">Purus sit amet luctus venenatis. Adipiscing at in tellus integer
-                            feugiat
-                            scelerisque varius.
-                            Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
-                            ultricies...</p>
-                        <a class="news-cta mt-2" href="#">Baca selengkapnya <img src="{{asset('front/assets/icons/right.png')}}"
-                                                                                 alt="Selengkapnya"></a>
-                    </div>
-                </div>
-                <div class="news-item mt-5">
-                    <img src="{{asset('front/assets/news/news3.png')}}" alt="News">
-                    <div class="news-detail">
-                        <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
-                            dui</h5>
-                        <p class="news-date mt-2">2 April 2021</p>
-                        <p class="news-meta mt-2">Purus sit amet luctus venenatis. Adipiscing at in tellus integer
-                            feugiat
-                            scelerisque varius.
-                            Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
-                            ultricies...</p>
-                        <a class="news-cta mt-2" href="#">Baca selengkapnya <img src="{{asset('front/assets/icons/right.png')}}"
-                                                                                 alt="Selengkapnya"></a>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
+           
             <div class="col-6 col-md-4">
                 <h5 class="title mb-5">Kisah Sukses</h5>
+                <?php 
+                $ulangi = 0;
+                while ($ulangi < 5){ $ulangi++;?>
                 <div class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Adipiscing at in tellus integer feugiat scelerisque varius</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
                 </div>
-                <div class="mini-news-item mt-3">
-                    <h5 class="mini-news-title">Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula</h5>
-                    <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
-                    <h5 class="mini-news-title">Id leo in vitae turpis massa sed elementum tempus</h5>
-                    <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
-                    <h5 class="mini-news-title">Etiam dignissim diam quis enim lobortis</h5>
-                    <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
-                    <h5 class="mini-news-title">Elementum facilisis leo vel fringilla est ullamcorper eget nulla
-                        facilisi</h5>
-                    <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
 </section>
 <!--news end-->
-
-<!--footer-->
-<section class="footer">
-    <div class="container">
-        <div class="row row-cols-3">
-            <div class="col-2">
-                <div class="row row-cols-3 social">
-                    <div class="col">
-                        <a href="#"><img src="{{asset('front/assets/footer/instagram.svg')}}" alt="Instagram"></a>
-                    </div>
-                    <div class="col">
-                        <a href="#"><img src="{{asset('front/assets/footer/facebook.svg')}}" alt="Facebook"></a>
-                    </div>
-                    <div class="col">
-                        <a href="#"><img src="{{asset('front/assets/footer/twitter.svg')}}" alt="Twitter"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8 d-flex flex-column align-items-center justify-content-start">
-                <img src="{{asset('front/assets/footer/ngo-white.svg')}}" alt="SINGO">
-                <div class="links mt-4">
-                    <a href="#">Beranda</a>
-                    <a href="#">Tentang</a>
-                    <a href="#">Profil NGO</a>
-                    <a href="#">Kontak</a>
-                    <a href="#">Berita</a>
-                </div>
-            </div>
-            <div class="col-2 address-info">
-                <p>Jl. Medan Merdeka Utara No.7,
-                    Jakarta Pusat 10110</p>
-                <hr>
-                <p>singo@kemendagri .go.id</p>
-                <p>021 3810343</p>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-2">
-            <p class="text-center copyright">Copyright &copy; 2021 All Rights Reserved</p>
-        </div>
-    </div>
-</section>
-<!--footer end-->
-<script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>
+@section('footer')
+    @include('layout.footer')
+@show
 </body>
 </html>

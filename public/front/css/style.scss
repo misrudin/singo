@@ -414,3 +414,71 @@ button {
     color: #8AB6D6;
   }
 }
+
+//profile - logo
+.list-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+
+  .container-list-logo {
+    width: 720px;
+    min-height: 100px;
+
+    .title {
+      font-weight: 600;
+      font-size: 31px;
+      line-height: 150%;
+      color: #303D4D;
+    }
+
+    .description {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 180%;
+      color: #5C6F80;
+    }
+
+
+    .list {
+      column-count: 3;
+      gap: 30px;
+
+      .item {
+        margin-bottom: 30px;
+        break-inside: avoid;
+        border-radius: 8px;
+        background: #FFFFFF;
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 25px;
+        height: 258px;
+
+        p {
+          font-size: 16px;
+          line-height: 180%;
+          text-align: center;
+          color: #303D4D;
+          margin: 0;
+        }
+
+
+        .spacer {
+          height: 30px;
+        }
+
+        img {
+          max-width: 126px;
+          display: block;
+          grid-row: 1 / -1;
+          grid-column: 1;
+          object-fit: contain;
+        }
+      }
+    }
+
+  }
+}
