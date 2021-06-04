@@ -1,5 +1,5 @@
 <?php
-
+// use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,26 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/detail', function () {
+    return view('detail');
+});
+
+Route::get('/document', function () {
+    return view('document');
+});
+
+Route::get('/publikasi', function () {
+    return view('publikasi');
+});
+
+Route::get('/publikasidetail', function () {
+    return view('publikasidetail');
+});
+
+Route::get('/news-detail', function () {
+    return view('news-detail');
+});
+
+
+// Route::get('/profile', [PageController::class, 'show']);

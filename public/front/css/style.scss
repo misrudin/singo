@@ -7,23 +7,6 @@ body {
   min-height: 100vh;
 }
 
-.navbar-nav {
-  li {
-    margin-right: 15px;
-    margin-left: 15px;
-    border: 1.5px solid transparent;
-    border-radius: 5px;
-
-    a {
-      color: white !important;
-    }
-
-    &:hover {
-      border-color: white;
-    }
-  }
-}
-
 button {
   box-shadow: none !important;
   color: #F0F4F6 !important;
@@ -48,8 +31,87 @@ button {
   }
 }
 
+.news-cta {
+  display: flex;
+  align-items: center;
+
+  a {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2978B5;
+    text-decoration: none;
+    min-width: 160px;
+  }
+
+  img {
+    height: 12px !important;
+    width: 6px !important;
+    object-fit: contain !important;
+    margin-left: 10px !important;
+  }
+}
+
+.line {
+  border-bottom: 2px solid #E5E5E5;
+}
+
 .navbar {
-  background: rgba(48, 61, 77, 0.3) !important;
+  &.navbar-dark {
+    background: rgba(48, 61, 77, 0.3) !important;
+
+    .navbar-nav {
+      li {
+        margin-right: 15px;
+        margin-left: 15px;
+        border: 1.5px solid transparent;
+        border-radius: 5px;
+
+        a {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 180%;
+          color: #F0F4F6;
+        }
+
+        &:hover {
+          border-color: white;
+        }
+      }
+    }
+  }
+
+  &.navbar-light {
+    .navbar-nav {
+      li {
+        margin-right: 15px;
+        margin-left: 15px;
+        border: 1.5px solid transparent;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 180%;
+
+        &.active {
+          a {
+            font-weight: 600;
+            color: #0061A8 !important;
+          }
+        }
+
+        a {
+          font-weight: 500;
+          color: #5C6F80 !important;
+          transition: .3s ease;
+        }
+
+        &:hover {
+          a {
+            color: #0061A8 !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -61,6 +123,14 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  &.banner-2 {
+    background-size: cover;
+    height: 748px;
+    //height: 150px;
+    overflow: hidden;
+    background-position: bottom;
+  }
 
   &:before {
     content: "";
@@ -86,8 +156,7 @@ button {
   }
 
   h1 {
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 61px;
     line-height: 140%;
     color: #FFFFFF;
@@ -323,22 +392,6 @@ button {
         line-height: 180%;
         margin: 0;
       }
-
-      .news-cta {
-        font-weight: 600;
-        font-size: 16px;
-        color: #2978B5;
-        display: flex;
-        text-decoration: none;
-        align-items: center;
-
-        img {
-          height: 12px;
-          width: 6px;
-          object-fit: contain;
-          margin-left: 10px;
-        }
-      }
     }
   }
 
@@ -456,6 +509,7 @@ button {
         align-items: center;
         padding: 16px 25px;
         height: 258px;
+        cursor: pointer;
 
         p {
           font-size: 16px;
@@ -481,4 +535,362 @@ button {
     }
 
   }
+}
+
+//DETAIL
+//back-button
+.back-button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2978B5;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+
+  &:hover {
+    color: #2978B5;
+  }
+
+  img {
+    height: 12px;
+    width: 6px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+}
+
+//address-detail
+.address-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 100px;
+  align-items: center;
+
+  .detail {
+    h1 {
+      font-weight: 500;
+      font-size: 31px;
+      line-height: 150%;
+      color: #303D4D;
+    }
+
+    .item-container {
+      display: flex;
+    }
+
+    .item {
+      display: flex;
+
+      img {
+        width: 20px;
+        height: 29px;
+        object-fit: contain;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 180%;
+        color: #5C6F80;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+.profile-detail {
+
+  .item_publikasi {
+    .image-container {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid #E5E5E5;
+      box-sizing: border-box;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: .3s ease .1s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: #303D4D;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 180%;
+      color: #5C6F80;
+      margin: 0;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 175%;
+    color: #303D4D;
+    margin: 0;
+  }
+
+  .item-container {
+    display: flex;
+  }
+
+  .item {
+    .item-title {
+      font-size: 16px;
+      line-height: 180%;
+      color: #5C6F80;
+      margin: 0;
+    }
+
+    .item-description {
+      font-size: 16px;
+      line-height: 180%;
+      color: #303D4D;
+      margin: 0;
+    }
+  }
+
+  .main-content {
+    .single-content {
+      img {
+        object-fit: contain;
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .title {
+        font-weight: 500;
+        font-size: 31px;
+        line-height: 150%;
+        color: #303D4D;
+        margin: 0;
+      }
+
+      .footer-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        margin: 0;
+
+        .date {
+          font-size: 16px;
+          line-height: 180%;
+          color: #5C6F80;
+        }
+      }
+    }
+
+    .grid-news {
+      .news-item {
+        .title {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 140%;
+          color: #303D4D;
+          margin: 0;
+        }
+
+        .date {
+          font-size: 16px;
+          line-height: 180%;
+          color: #5C6F80;
+          margin: 0;
+        }
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+
+//news detail
+.detail-news {
+  .title {
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 150%;
+    color: #303D4D;
+    margin: 0;
+  }
+
+  .date {
+    font-size: 16px;
+    line-height: 180%;
+    color: #5C6F80;
+    margin: 0;
+  }
+
+  img {
+    border-radius: 8px;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .full-description {
+    font-size: 16px;
+    line-height: 180%;
+    color: #303D4D;
+    white-space: pre-line;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+  }
+
+}
+
+//sidebar right
+.sidebar-right {
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 175%;
+    color: #303D4D;
+    margin: 0;
+  }
+
+  .news-item-sidebar {
+    display: flex;
+
+    .title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #303D4D;
+      margin: 0;
+    }
+
+    .date {
+      font-size: 13px;
+      line-height: 180%;
+      color: #A6B3BC;
+      margin: 0;
+    }
+
+    img {
+      width: 137px;
+      height: 91px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin-right: 16px;
+    }
+  }
+}
+
+//detail publikasi
+.detail-publikasi {
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.detail-publikasi-description {
+  h1 {
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 150%;
+    color: #303D4D;
+    margin: 0;
+  }
+
+  .description-publikasi {
+    font-size: 16px;
+    line-height: 180%;
+    color: #303D4D;
+    white-space: pre-line;
+    margin: 0;
+  }
+
+  .user-publikasi {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 180%;
+      color: #5C6F80;
+      margin: 0;
+    }
+  }
+}
+
+.item-detail-publikasi {
+  display: flex;
+  align-items: center;
+
+  .isbn {
+    padding: 0px 5px;
+    border: 2px solid #5C6F80;
+    color: #5C6F80;
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+  }
+
+  .text-publikasi {
+    font-size: 16px;
+    line-height: 180%;
+    color: #5C6F80;
+    margin: 0;
+  }
+
+  .icon-publikasi {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}
+
+.select2-container .select2-choice {
+  padding: 5px 10px;
+  height: 40px;
+  width: 132px;
+  font-size: 1.2em;
+}
+
+.select2-container--default .select2-selection--single {
+  position: relative;
+  height: 40px;
+  padding: 5px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 40px;
+  font-size: 1.3em;
+  padding: 4px 12px;
+  height: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #5C6F80;
 }

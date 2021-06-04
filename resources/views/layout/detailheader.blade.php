@@ -9,10 +9,10 @@
 </head>
 <body>
 <!--nav-->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="{{asset('front/assets/logo.svg')}}" alt="" width="128" height="46"
+            <img src="{{asset('front/assets/navbar/rikolto.svg')}}" alt="" width="128" height="46"
                  class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -21,17 +21,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Beranda</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url('/detail') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang</a>
+                    <a class="nav-link" href="{{ url('/document') }}">Dokumen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/profile') }}">Profil NGO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Berita</a>
+                    <a class="nav-link" href="{{ url('/publikasi') }}">Publikasi</a>
                 </li>
             </ul>
             <form class="ms-3 p-0">
@@ -39,5 +36,5 @@
             </form>
         </div>
     </div>
-  </nav>
+</nav>
 <!--nav end-->

@@ -65,8 +65,10 @@
 
             <div class="item">
                 <img src="{{asset('front/assets/logo/rikolto.svg')}}" alt="Oisca">
+                <a class="link" href="{{ url('/detail') }}">
                 <div class="spacer"></div>
                 <p>Pemberdayaan Masyarakat</p>
+                </a>
             </div>
 
             <div class="item">
