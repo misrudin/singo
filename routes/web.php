@@ -21,9 +21,11 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/detail', function () {
-    return view('detail');
-});
+// Route::get('/detail', function () {
+//     return view('detail');
+// });
+
+Route::get('/detail/{id}', 'DetailController@showDetail');
 
 Route::get('/document', function () {
     return view('document');
@@ -42,4 +44,4 @@ Route::get('/news-detail', function () {
 });
 
 
-// Route::get('/profile', [PageController::class, 'show']);
+Route::get('/test/{id}', 'ProfileController@showProfile');

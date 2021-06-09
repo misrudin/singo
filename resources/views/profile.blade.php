@@ -62,13 +62,15 @@
             <div class="item">
                 <img src="{{asset('front/assets/logo/islamic.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
-                <p>Peningkatan Kesejahteraan Masyarakat</p>
+                <a class="link" href="{{ url('/detail/islamic') }}">
+                                <p>Peningkatan Kesejahteraan Masyarakat</p>
+                                </a>
             </div>
 
             <div class="item">
                 <img src="{{asset('front/assets/logo/rikolto.svg')}}" alt="Oisca">
-                <a class="link" href="{{ url('/detail') }}">
                 <div class="spacer"></div>
+                <a class="link" href="{{ url('/detail/rikolto') }}">
                 <p>Pemberdayaan Masyarakat</p>
                 </a>
             </div>

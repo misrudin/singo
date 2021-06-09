@@ -22,9 +22,9 @@
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <div class="address-detail">
-                    <img src="{{asset('front/assets/navbar/rikolto.svg')}}" alt="Logo">
+                    <img src="{{asset('front/assets/navbar/'. $name .'.svg')}}" alt="Logo">
                     <div class="detail">
-                        <h1>Rikolto</h1>
+                        <h1 class="text-capitalize">{{$name}}</h1>
                         <div class="item">
                             <img src="{{asset('front/assets/icons/feather_map-pin.svg')}}" alt="Map">
                             <p>Jl. Tukad Unda VIII No.10b, Panjer, Kec. Denpasar Selatan, Kota Denpasar, Bali 80225</p>

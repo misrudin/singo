@@ -6,14 +6,14 @@
     <link href="{{asset('front/css/select2.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('front/css/style.css')}}" rel="stylesheet">
-    <title>Singo</title>
+    <title>Singo - {{$name}}</title>
 </head>
 <body>
 <!--nav-->
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="{{asset('front/assets/navbar/rikolto.svg')}}" alt="" width="128" height="46"
+            <img src="{{asset('front/assets/navbar/' . $name . '.svg')}}" alt="" width="128" height="46"
                  class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
