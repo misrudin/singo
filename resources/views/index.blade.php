@@ -20,26 +20,26 @@
 <!--end of banner-->
 
 <!--Achievement-->
-<section class="achievement mt-5">
+<section id="achievement" class="achievement mt-5">
     <div class="container">
         <div class="item">
-            <h5>Rp 240 M</h5>
+            <h5 class="counter" data-count="240" data-sufix="Rp" data-prefix="M">Rp 0 M</h5>
             <p class="mt-3">Komitmen Hibah</p>
         </div>
         <div class="item">
-            <h5>Rp 192 M</h5>
+            <h5 class="counter" data-count="192" data-sufix="Rp" data-prefix="M">Rp 0 M</h5>
             <p class="mt-3">Serapan</p>
         </div>
         <div class="item">
-            <h5>30+</h5>
+            <h5 class="counter" data-count="30" data-prefix="+">0+</h5>
             <p class="mt-3">Mitra Asing</p>
         </div>
         <div class="item">
-            <h5>25+</h5>
+            <h5 class="counter" data-count="25" data-prefix="+">0+</h5>
             <p class="mt-3">Wilayah Kerja</p>
         </div>
         <div class="item">
-            <h5>70+</h5>
+            <h5 class="counter" data-count="70" data-prefix="+">0+</h5>
             <p class="mt-3">Tenaga Ahli</p>
         </div>
     </div>
@@ -211,5 +211,50 @@
 @section('footer')
     @include('layout.footer')
 @show
+<script>
+    function buttonSelengkapnya() {
+        window.location.href = "/singo/profile.html"
+    }
+
+    $(window).scroll(startCounter);
+
+    function startCounter() {
+        if ($(window).scrollTop() > $('#achievement')[0].offsetTop/3) {
+            $(window).off("scroll", startCounter);
+
+            $('.counter').each(function() {
+                let $this = $(this),
+                    countTo = $this.attr('data-count'),
+                    sufix = $this.attr('data-sufix'),
+                    prefix = $this.attr('data-prefix');
+
+
+                $({ countNum: $this.text()}).animate({
+                        countNum: countTo
+                    },
+                    {
+                        duration: 7000,
+                        easing:'linear',
+                        step: function() {
+                            if (sufix) {
+                                $this.text(`${sufix} ${Math.floor(this.countNum)} ${prefix}`);
+                            }else {
+                                $this.text(`${Math.floor(this.countNum)}${prefix}`);
+                            }
+                        },
+                        complete: function() {
+                            if (sufix) {
+                                $this.text(`${sufix} ${this.countNum} ${prefix}`);
+                            }else {
+                                $this.text(`${this.countNum}${prefix}`);
+                            }
+                        }
+                    });
+            });
+
+        }
+    }
+
+</script>
 </body>
 </html>
