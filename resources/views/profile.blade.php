@@ -1,3 +1,5 @@
+@section('title', 'Profile')
+
 @section('header')
     @include('layout.header')
 @show

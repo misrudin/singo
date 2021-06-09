@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('front/css/style.css')}}" rel="stylesheet">
-    <title>Singo</title>
+    <title>Singo - @yield('title')</title>
 </head>
 <body>
 <!--nav-->

@@ -1,3 +1,5 @@
+@section('title', 'Home')
+
 @section('header')
     @include('layout.header')
 @show
@@ -168,9 +170,9 @@
 <section class="news">
     <div class="container">
         <div class="row row-cols-2 g-5">
-            <div class="col-md-8"> 
+            <div class="col-md-8">
                 <h5 class="title">Berita</h5>
-                <?php 
+                <?php
                 $ulangi = 0;
                 while ($ulangi < 3){ $ulangi++;?>
                 <div class="news-item mt-5">
@@ -185,15 +187,15 @@
                             Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
                             ultricies...</p>
                         <a class="news-cta mt-2" href="#">Baca selengkapnya <img src="{{asset('front/assets/icons/right.png')}}"
-                                                                                 alt="Selengkapnya"></a>                                                                                                               
+                                                                                 alt="Selengkapnya"></a>
                     </div>
                 </div>
                 <?php } ?>
             </div>
-           
+
             <div class="col-6 col-md-4">
                 <h5 class="title mb-5">Kisah Sukses</h5>
-                <?php 
+                <?php
                 $ulangi = 0;
                 while ($ulangi < 5){ $ulangi++;?>
                 <div class="mini-news-item mt-3">
