@@ -21,15 +21,8 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-// Route::get('/detail', function () {
-//     return view('detail');
-// });
-
 Route::get('/detail/{id}', 'DetailController@showDetail');
-
-Route::get('/document', function () {
-    return view('document');
-});
+Route::get('/document/{id}', 'DetailController@showDetail');
 
 Route::get('/publikasi', function () {
     return view('publikasi');

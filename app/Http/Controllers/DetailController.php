@@ -10,4 +10,9 @@ class DetailController extends Controller
             {
                 return view('detail', ['name' => $id]);
             }
+
+     public function showDocument($id)
+             {
+                return view('document', ['name' => $id]);
+             }
 }
