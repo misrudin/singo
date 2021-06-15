@@ -1,7 +1,13 @@
 <?php
-// use App\Http\Controllers\PageController;
-use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DetailController ;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\PublikasiController;
+use App\Http\Controllers\PubdetailController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,35 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-// Route::get('/detail', function () {
-//     return view('detail');
-// });
-
-Route::get('/detail/{id}', 'DetailController@showDetail');
-
-Route::get('/document', function () {
-    return view('document');
-});
-
-Route::get('/publikasi', function () {
-    return view('publikasi');
-});
-
-Route::get('/publikasidetail', function () {
-    return view('publikasidetail');
-});
-
-Route::get('/news-detail', function () {
-    return view('news-detail');
-});
-
-
-Route::get('/test/{id}', 'ProfileController@showProfile');
+Route::get('/', [HomeController ::class,'index']);
+Route::get('/home',[HomeController ::class,'index']);
+Route::get('/profile',[ProfileController ::class,'index']);
+Route::get('/test/{id}',[ProfileController ::class,'showProfile']);
+Route::get('/detail/{id}',[DetailController::class,'showDetail']);
+Route::get('/document',[DocumentController ::class,'showDetail']);
+Route::get('/publikasi',[PublikasiController::class,'index']);
+Route::get('/pubdetail',[PubdetailController::class,'index']);
+Route::get('/news-detail',[NewsController::class,'index']);

@@ -61,7 +61,7 @@
                             <p class="mt-2">Ville de Bobigny</p>
                         </div>
                         <div class="col item_publikasi">
-                            <a class="link" href="{{ url('/publikasidetail') }}">
+                            <a class="link" href="{{ url('/pubdetail') }}">
                             <div class="image-container">
                                 <img src="{{asset('front/assets/publikasi/image%2030.png')}}" alt="Publikasi">
                             </div>

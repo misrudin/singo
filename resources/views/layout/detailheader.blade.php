@@ -6,7 +6,7 @@
     <link href="{{asset('front/css/select2.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('front/css/style.css')}}" rel="stylesheet">
-    <title>Singo - {{$name}}</title>
+    <title>Singo - {{ $name }}</title>
 </head>
 <body>
 <!--nav-->
