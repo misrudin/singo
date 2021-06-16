@@ -21,13 +21,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Tentang</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::routeIs('profile') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ url('/profile') }}">Profil NGO</a>
                 </li>
                 <li class="nav-item">

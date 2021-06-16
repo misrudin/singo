@@ -62,6 +62,9 @@ button.btn-primary:focus {
   line-height: 180%;
   color: #F0F4F6;
 }
+.navbar.navbar-dark .navbar-nav li.nav-item.active {
+  border-color: white;
+}
 .navbar.navbar-dark .navbar-nav li:hover {
   border-color: white;
 }
@@ -481,11 +484,12 @@ button.btn-primary:focus {
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 16px 25px;
   height: 258px;
   cursor: pointer;
+  text-decoration: none;
 }
 .list-logo .container-list-logo .list .item p {
   font-size: 16px;
@@ -493,6 +497,7 @@ button.btn-primary:focus {
   text-align: center;
   color: #303D4D;
   margin: 0;
+  font-weight: 500;
 }
 .list-logo .container-list-logo .list .item .spacer {
   height: 30px;

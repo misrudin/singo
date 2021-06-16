@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class PublikasiController extends Controller
 {
     //
-    public function index()
+    public function index($id)
     {
-        return view('publikasi');
+        return view('publikasi', ['name' => $id]);
     }
 }

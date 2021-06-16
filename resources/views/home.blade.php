@@ -1,11 +1,12 @@
 @section('title', 'Home')
 
 @section('header')
-    @include('layout.header')
+@include('layout.header')
 @show
 
 <!--banner-->
-<section style="background-image: url(front/assets/images/bg_banner.png)" class="banner d-flex align-items-center">
+<section style="background-image: url({{asset('/front/assets/images/bg_banner.png')}})"
+         class="banner d-flex align-items-center">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -65,26 +66,48 @@
             </div>
             <div class="col images">
                 <div class="grid-3">
-                    <img src="{{asset('front/assets/profile/swiss.png')}}" alt="swiss">
-                    <img src="{{asset('front/assets/profile/oisca.png')}}" alt="oisca">
-                    <img src="{{asset('front/assets/profile/asb.png')}}" alt="asb">
+                    <a href="{{ url('/swiss') }}">
+                        <img src="{{asset('front/assets/profile/swiss.png')}}" alt="swiss">
+                    </a>
+                    <a href="{{ url('/oisca') }}">
+                        <img src="{{asset('front/assets/profile/oisca.png')}}" alt="oisca">
+                    </a>
+                    <a href="{{ url('/asb') }}">
+                        <img src="{{asset('front/assets/profile/asb.png')}}" alt="asb">
+                    </a>
                 </div>
 
                 <div class="grid-2 mt-3">
-                    <img src="{{asset('front/assets/profile/ford.png')}}" alt="ford">
-                    <img src="{{asset('front/assets/profile/islamic.png')}}" alt="islamic">
+                    <a href="{{ url('/ford') }}">
+                        <img src="{{asset('front/assets/profile/ford.png')}}" alt="ford">
+                    </a>
+                    <a href="{{ url('/islamic') }}">
+                        <img src="{{asset('front/assets/profile/islamic.png')}}" alt="islamic">
+                    </a>
                 </div>
 
                 <div class="grid-3 mt-3">
-                    <img src="{{asset('front/assets/profile/snv.png')}}" alt="snv">
-                    <img src="{{asset('front/assets/profile/icco.png')}}" alt="icco">
-                    <img src="{{asset('front/assets/profile/konard.png')}}" alt="konard">
+                    <a href="{{ url('/snv') }}">
+                        <img src="{{asset('front/assets/profile/snv.png')}}" alt="snv">
+                    </a>
+                    <a href="{{ url('/icco') }}">
+                        <img src="{{asset('front/assets/profile/icco.png')}}" alt="icco">
+                    </a>
+                    <a href="{{ url('/konard') }}">
+                        <img src="{{asset('front/assets/profile/konard.png')}}" alt="konard">
+                    </a>
                 </div>
 
                 <div class="grid-3 mt-3">
-                    <img src="{{asset('front/assets/profile/winrock.png')}}" alt="winrock">
-                    <img src="{{asset('front/assets/profile/plan.png')}}" alt="plan">
-                    <img src="{{asset('front/assets/profile/rikolto.png')}}" alt="rikolto">
+                    <a href="{{ url('/winrock') }}">
+                        <img src="{{asset('front/assets/profile/winrock.png')}}" alt="winrock">
+                    </a>
+                    <a href="{{ url('/plan') }}">
+                        <img src="{{asset('front/assets/profile/plan.png')}}" alt="plan">
+                    </a>
+                    <a href="{{ url('/rikolto') }}">
+                        <img src="{{asset('front/assets/profile/rikolto.png')}}" alt="rikolto">
+                    </a>
                 </div>
 
             </div>
@@ -138,13 +161,15 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{asset('front/assets/profile/carousel1.png')}}" class="d-block w-100" alt="carousel image">
+                        <img src="{{asset('front/assets/profile/carousel1.png')}}" class="d-block w-100"
+                             alt="carousel image">
                         <div class="carousel-caption d-none d-md-block">
                             <p>Penandatanganan lorem ipsum pada saat dolor sit amet</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{asset('front/assets/profile/carousel1.png')}}" class="d-block w-100" alt="carousel image">
+                        <img src="{{asset('front/assets/profile/carousel1.png')}}" class="d-block w-100"
+                             alt="carousel image">
                         <div class="carousel-caption d-none d-md-block">
                             <p>Penandatanganan lorem ipsum pada saat dolor sit amet</p>
                         </div>
@@ -172,9 +197,6 @@
         <div class="row row-cols-2 g-5">
             <div class="col-md-8">
                 <h5 class="title">Berita</h5>
-                <?php
-                $ulangi = 0;
-                while ($ulangi < 3){ $ulangi++;?>
                 <div class="news-item mt-5">
                     <img src="{{asset('front/assets/news/news1.png')}}" alt="News">
                     <div class="news-detail">
@@ -186,41 +208,89 @@
                             scelerisque varius.
                             Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
                             ultricies...</p>
-                        <a class="news-cta mt-2" href="#">Baca selengkapnya <img src="{{asset('front/assets/icons/right.png')}}"
-                                                                                 alt="Selengkapnya"></a>
+                        <div class="news-cta mt-2">
+                            <a href="#">Baca selengkapnya</a>
+                            <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
+                        </div>
                     </div>
                 </div>
-                <?php } ?>
+                <div class="news-item mt-5">
+                    <img src="{{asset('front/assets/news/news2.png')}}" alt="News">
+                    <div class="news-detail">
+                        <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
+                            dui</h5>
+                        <p class="news-date mt-2">2 April 2021</p>
+                        <p class="news-meta mt-2">Purus sit amet luctus venenatis. Adipiscing at in tellus integer
+                            feugiat
+                            scelerisque varius.
+                            Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
+                            ultricies...</p>
+                        <div class="news-cta mt-2">
+                            <a href="#">Baca selengkapnya</a>
+                            <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
+                        </div>
+                    </div>
+                </div>
+                <div class="news-item mt-5">
+                    <img src="{{asset('front/assets/news/news3.png')}}" alt="News">
+                    <div class="news-detail">
+                        <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
+                            dui</h5>
+                        <p class="news-date mt-2">2 April 2021</p>
+                        <p class="news-meta mt-2">Purus sit amet luctus venenatis. Adipiscing at in tellus integer
+                            feugiat
+                            scelerisque varius.
+                            Faucibus vitae aliquet nec dui ut ornare. Phasellus vestibulum lorem sed risus
+                            ultricies...</p>
+                        <div class="news-cta mt-2">
+                            <a href="#">Baca selengkapnya</a>
+                            <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-6 col-md-4">
                 <h5 class="title mb-5">Kisah Sukses</h5>
-                <?php
-                $ulangi = 0;
-                while ($ulangi < 5){ $ulangi++;?>
                 <div class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Adipiscing at in tellus integer feugiat scelerisque varius</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
                 </div>
-                <?php } ?>
+                <div class="mini-news-item mt-3">
+                    <h5 class="mini-news-title">Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula</h5>
+                    <p class="mini-news-date mt-2">31 Maret 2021</p>
+                </div>
+                <div class="mini-news-item mt-3">
+                    <h5 class="mini-news-title">Id leo in vitae turpis massa sed elementum tempus</h5>
+                    <p class="mini-news-date mt-2">31 Maret 2021</p>
+                </div>
+                <div class="mini-news-item mt-3">
+                    <h5 class="mini-news-title">Etiam dignissim diam quis enim lobortis</h5>
+                    <p class="mini-news-date mt-2">31 Maret 2021</p>
+                </div>
+                <div class="mini-news-item mt-3">
+                    <h5 class="mini-news-title">Elementum facilisis leo vel fringilla est ullamcorper eget nulla
+                        facilisi</h5>
+                    <p class="mini-news-date mt-2">31 Maret 2021</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!--news end-->
 @section('footer')
-    @include('layout.footer')
+@include('layout.footer')
 @show
 <script>
     function buttonSelengkapnya() {
-        window.location.href = "/singo/profile.html"
+        window.location.href = '/singo/profile.html';
     }
 
     $(window).scroll(startCounter);
 
     function startCounter() {
-        if ($(window).scrollTop() > $('#achievement')[0].offsetTop/3) {
-            $(window).off("scroll", startCounter);
+        if ($(window).scrollTop() > $('#achievement')[0].offsetTop / 3) {
+            $(window).off('scroll', startCounter);
 
             $('.counter').each(function() {
                 let $this = $(this),
@@ -228,27 +298,26 @@
                     sufix = $this.attr('data-sufix'),
                     prefix = $this.attr('data-prefix');
 
-
-                $({ countNum: $this.text()}).animate({
-                        countNum: countTo
+                $({countNum: $this.text()}).animate({
+                        countNum: countTo,
                     },
                     {
                         duration: 7000,
-                        easing:'linear',
+                        easing: 'linear',
                         step: function() {
                             if (sufix) {
                                 $this.text(`${sufix} ${Math.floor(this.countNum)} ${prefix}`);
-                            }else {
+                            } else {
                                 $this.text(`${Math.floor(this.countNum)}${prefix}`);
                             }
                         },
                         complete: function() {
                             if (sufix) {
                                 $this.text(`${sufix} ${this.countNum} ${prefix}`);
-                            }else {
+                            } else {
                                 $this.text(`${this.countNum}${prefix}`);
                             }
-                        }
+                        },
                     });
             });
 

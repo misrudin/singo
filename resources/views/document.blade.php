@@ -2,7 +2,7 @@
     @include('layout.detailheader')
 @show
 <!--banner-->
-<section style="background-image: url(front/assets/images/bg-dokumen.png)"
+<section style="background-image: url({{url('front/assets/images/bg-dokumen.png')}})"
          class="banner banner-2 d-flex align-items-center">
     <div class="container">
         <div class="row title-container">
@@ -80,6 +80,8 @@
     </div>
 </section>
 <!--footer-->
+
+@section('margin', 'm-0')
 @section('footer')
     @include('layout.footer')
 @show

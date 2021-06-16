@@ -1,3 +1,5 @@
+@section('title', 'Publikasi')
+
 @section('detailheader')
     @include('layout.detailheader')
 @show
@@ -7,19 +9,19 @@
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <div class="address-detail">
-                    <img src="{{asset('front/assets/navbar/rikolto.svg')}}" alt="Logo">
+                    <img src="{{asset('front/assets/navbar/'. $name .'.svg')}}" alt="Logo">
                     <div class="detail">
-                        <h1>Rikolto</h1>
+                        <h1 class="text-capitalize">{{$name}}</h1>
                         <div class="item">
                             <img src="{{asset('front/assets/icons/feather_map-pin.svg')}}" alt="Map">
                             <p>Jl. Tukad Unda VIII No.10b, Panjer, Kec. Denpasar Selatan, Kota Denpasar, Bali 80225</p>
                         </div>
                         <div class="item-container mt-1">
                             <div class="item">
-                                <img src="{{asset('front/assets/icons/feather_mail.svg')}}" alt="Main">
+                                <img src="{{asset('front/assets/icons/feather_mail.svg')}}" alt="Mail">
                                 <p>contact@asbindonesia.org</p>
                             </div>
-                            <div class="item ms-4">
+                            <div class="item">
                                 <img src="{{asset('front/assets/icons/feather_globe.svg')}}" alt="Globe">
                                 <p>https://www.asbindonesia.org/</p>
                             </div>
@@ -45,7 +47,7 @@
                     <h5 class="title">Publikasi</h5>
                     <div class="line mb-4"></div>
 
-                    <div class="row row-cols-3 gx-5 gy-4">
+                    <div class="row-publikasi">
                         <div class="col item_publikasi">
                             <div class="image-container">
                                 <img src="{{asset('front/assets/publikasi/image%2024.png')}}" alt="Publikasi">
@@ -60,12 +62,10 @@
                             <h4 class="mt-3">Bonjour Bobigny n° 880 du 13 au 26</h4>
                             <p class="mt-2">Ville de Bobigny</p>
                         </div>
-                        <div class="col item_publikasi">
-                            <a class="link" href="{{ url('/pubdetail') }}">
+                        <div onclick="detailPublikasi()" class="col item_publikasi">
                             <div class="image-container">
                                 <img src="{{asset('front/assets/publikasi/image%2030.png')}}" alt="Publikasi">
                             </div>
-                            </a>
                             <h4 class="mt-3">It Ends With Us</h4>
                             <p class="mt-2">Colleen Hoover</p>
                         </div>

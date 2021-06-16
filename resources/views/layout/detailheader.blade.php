@@ -6,7 +6,7 @@
     <link href="{{asset('front/css/select2.min.css')}}" rel="stylesheet"/>
     <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('front/css/style.css')}}" rel="stylesheet">
-    <title>Singo - {{ $name }}</title>
+    <title>{{ $name }} - @yield('title')</title>
 </head>
 <body>
 <!--nav-->
@@ -22,14 +22,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ url('/detail') }}">Beranda</a>
+                <li class="nav-item {{ request()->is(url('/' . $name . '')) ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ url('/' . $name . '') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/document') }}">Dokumen</a>
+                    <a class="nav-link" href="{{ url('/'. $name .'/document') }}">Dokumen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/publikasi') }}">Publikasi</a>
+                    <a class="nav-link" href="{{ url('/'. $name .'/publikasi') }}">Publikasi</a>
                 </li>
             </ul>
             <form class="ms-3 p-0">

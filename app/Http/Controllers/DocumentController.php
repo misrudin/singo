@@ -6,17 +6,8 @@ use Illuminate\Http\Request;
 
 class DocumentController extends Controller
 {
-    //
-    // public function index()
-    // {
-    //     return view ('document');
-    // }
-    //  public function showDetail($id)
-    // {
-    //     return view('detail', ['name' => $id]);
-    // }
-      public function showDetail($id)
-            {
-                return view('detail', ['name' => $id]);
-            }
+    public function index($id)
+    {
+        return view('document', ['name' => $id, 'className' => 'footer m-0']);
+     }
 }

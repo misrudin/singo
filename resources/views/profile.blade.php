@@ -1,7 +1,7 @@
 @section('title', 'Profile')
 
 @section('header')
-    @include('layout.header')
+@include('layout.header')
 @show
 
 <!--list-->
@@ -16,89 +16,85 @@
             dolore magna aliqua
         </p>
         <div class="mt-3 list">
-            <div class="item">
+            <a class="item" href="{{ url('/oisca') }}">
                 <img src="{{asset('front/assets/logo/oisca.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Pertanian & Lingkungan Hidup</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/konard') }}">
                 <img src="{{asset('front/assets/logo/konard.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Promosi Nilai-nilai Demokrasi</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/winrock') }}">
                 <img src="{{asset('front/assets/logo/winrock.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Kemanusiaan</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/snv') }}">
                 <img src="{{asset('front/assets/logo/snv.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Pertanian Terpadu Berkelanjutan, Air & Sanitasi, Energi</p>
-            </div>
+            </a>
 
             <!-- space top -->
-            <div class="item" style="visibility: hidden; height: 100px">
+            <a class="item" style="visibility: hidden; height: 100px">
                 <img src="" alt="none">
                 <p>-</p>
-            </div>
+            </a>
             <!-- space top end -->
 
-            <div class="item">
+            <a class="item" href="{{ url('/icco') }}">
                 <img src="{{asset('front/assets/logo/icco.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Kemanusiaan</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/plan') }}">
                 <img src="{{asset('front/assets/logo/plan.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Perlindungan & Kesejahteraan Anak</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/islamic') }}">
                 <img src="{{asset('front/assets/logo/islamic.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
-                <a class="link" href="{{ url('/detail/islamic') }}">
-                                <p>Peningkatan Kesejahteraan Masyarakat</p>
-                                </a>
-            </div>
+                <p>Peningkatan Kesejahteraan Masyarakat</p>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/rikolto') }}">
                 <img src="{{asset('front/assets/logo/rikolto.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
-                <a class="link" href="{{ url('/detail/rikolto') }}">
                 <p>Pemberdayaan Masyarakat</p>
-                </a>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/asb') }}">
                 <img src="{{asset('front/assets/logo/asb.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Penguatan Kapasitas Masyarakat</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/ford') }}">
                 <img src="{{asset('front/assets/logo/ford.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Pemberdayaan Masyarakat</p>
-            </div>
+            </a>
 
-            <div class="item">
+            <a class="item" href="{{ url('/swiss') }}">
                 <img src="{{asset('front/assets/logo/swiss.svg')}}" alt="Oisca">
                 <div class="spacer"></div>
                 <p>Pengembangan Ekonomi Masyarakat</p>
-            </div>
+            </a>
         </div>
     </div>
 </section>
 <!--list end-->
 
 @section('footer')
-    @include('layout.footer')
+@include('layout.footer')
 @show
 </body>
 </html>
