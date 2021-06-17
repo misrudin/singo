@@ -48,49 +48,49 @@
                     <div class="line mb-4"></div>
 
                     <div class="row-publikasi">
-                        <div class="col item_publikasi">
+                        <a class="col item_publikasi" href="{{ url('/' . $name . '/publikasi/1') }}">
                             <div class="image-container">
-                                <img src="{{asset('front/assets/publikasi/image%2024.png')}}" alt="Publikasi">
+                                <img src="{{asset('front/assets/publikasi/1.png')}}" alt="Publikasi">
                             </div>
                             <h4 class="mt-3">Modul Pelatihan Implementasi UU 14</h4>
                             <p class="mt-2">Pak Boed</p>
-                        </div>
-                        <div class="col item_publikasi">
+                        </a>
+                        <a class="col item_publikasi" href="{{ url('/' . $name . '/publikasi/2') }}">
                             <div class="image-container">
-                                <img src="{{asset('front/assets/publikasi/image%2025.png')}}" alt="Publikasi">
+                                <img src="{{asset('front/assets/publikasi/2.png')}}" alt="Publikasi">
                             </div>
                             <h4 class="mt-3">Bonjour Bobigny n° 880 du 13 au 26</h4>
                             <p class="mt-2">Ville de Bobigny</p>
-                        </div>
-                        <div onclick="detailPublikasi()" class="col item_publikasi">
+                        </a>
+                        <a class="col item_publikasi" href="{{ url('/' . $name . '/publikasi/3') }}">
                             <div class="image-container">
-                                <img src="{{asset('front/assets/publikasi/image%2030.png')}}" alt="Publikasi">
+                                <img src="{{asset('front/assets/publikasi/3.png')}}" alt="Publikasi">
                             </div>
                             <h4 class="mt-3">It Ends With Us</h4>
                             <p class="mt-2">Colleen Hoover</p>
-                        </div>
+                        </a>
 
-                        <div class="col item_publikasi">
+                        <a class="col item_publikasi" href="{{ url('/' . $name . '/publikasi/4') }}">
                             <div class="image-container">
-                                <img src="{{asset('front/assets/publikasi/image%2027.png')}}" alt="Publikasi">
+                                <img src="{{asset('front/assets/publikasi/4.png')}}" alt="Publikasi">
                             </div>
                             <h4 class="mt-3">Peaky Blinders The Real Story</h4>
                             <p class="mt-2">Carl Chinn</p>
-                        </div>
-                        <div class="col item_publikasi">
+                        </a>
+                        <a class="col item_publikasi" href="{{ url('/' . $name . '/publikasi/5') }}">
                             <div class="image-container">
-                                <img src="{{asset('front/assets/publikasi/image%2029.png')}}" alt="Publikasi">
+                                <img src="{{asset('front/assets/publikasi/5.png')}}" alt="Publikasi">
                             </div>
                             <h4 class="mt-3">Filosofi Teras</h4>
                             <p class="mt-2">Henry Manampiring</p>
-                        </div>
-                        <div class="col item_publikasi">
+                        </a>
+                        <a class="col item_publikasi" href="{{ url('/' . $name . '/publikasi/6') }}">
                             <div class="image-container">
-                                <img src="{{asset('front/assets/publikasi/image%2028.png')}}" alt="Publikasi">
+                                <img src="{{asset('front/assets/publikasi/6.png')}}" alt="Publikasi">
                             </div>
                             <h4 class="mt-3">The Subtle Art of Not Giving A F*ck</h4>
                             <p class="mt-2">Mark Manson</p>
-                        </div>
+                        </a>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
                         <button class="btn btn-primary">Lihat lebih banyak</button>
@@ -104,7 +104,7 @@
 
 <!--footer-->
 @section('footer')
-    @include('layout.footer')
+@include('layout.footer')
 @show
 <!--footer end-->
 <script src="js/bootstrap.bundle.min.js"></script>

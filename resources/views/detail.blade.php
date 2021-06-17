@@ -1,3 +1,5 @@
+@section('title', 'Beranda')
+
 @section('detailheader')
     @include('layout.detailheader')
 @show
@@ -65,8 +67,8 @@
                             <p class="item-description">24 May 1997</p>
                         </div>
                         <div class="item ms-5">
-                            <p class="item-title">Didirikan</p>
-                            <p class="item-description">24 May 1997</p>
+                            <p class="item-title">Direktur</p>
+                            <p class="item-description">Melina Margaretha</p>
                         </div>
                     </div>
 
@@ -108,7 +110,7 @@
                             <div class="footer-detail mt-2">
                                 <p class="date">22 April 2021</p>
                                 <div class="news-cta">
-                                    <a href="#">Baca selengkapnya</a>
+                                    <a href="{{ url('/'. $name .'/news-detail') }}">Baca selengkapnya</a>
                                     <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
                                 </div>
                             </div>

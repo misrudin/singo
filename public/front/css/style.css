@@ -611,6 +611,10 @@ button.btn-primary:focus {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
+.profile-detail .row-publikasi .item_publikasi {
+  cursor: pointer;
+  text-decoration: none;
+}
 .profile-detail .row-publikasi .item_publikasi .image-container {
   overflow: hidden;
   border-radius: 8px;

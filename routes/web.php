@@ -25,5 +25,5 @@ Route::get('/profile',[ProfileController ::class,'index']);
 Route::get('/{id}',[DetailController::class,'showDetail']);
 Route::get('/{id}/document',[DocumentController ::class,'index']);
 Route::get('/{id}/publikasi',[PublikasiController::class,'index']);
-Route::get('/pubdetail',[PubdetailController::class,'index']);
-Route::get('/news-detail',[NewsController::class,'index']);
+Route::get('/{id}/publikasi/{publikasi_id}',[PublikasiController::class,'detail']);
+Route::get('/{id}/news-detail',[NewsController::class,'index']);

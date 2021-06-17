@@ -813,6 +813,9 @@ button {
         gap: 50px;
 
         .item_publikasi {
+            cursor: pointer;
+            text-decoration: none;
+
             .image-container {
                 overflow: hidden;
                 border-radius: 8px;

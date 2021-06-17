@@ -1,5 +1,5 @@
 @section('detailheader')
-    @include('layout.detailheader')
+@include('layout.detailheader')
 @show
 <div style="height: 50px"></div>
 <!--content-->
@@ -8,7 +8,7 @@
         <div class="col-md-8">
             <!-- back-action -->
             <div class="back-action">
-                <a class="back-button" href="detail.html">
+                <a class="back-button" href="{{ url('/'. $name .'') }}">
                     <img src="{{asset('front/assets/icons/left.png')}}" alt="Back"> Kembali
                 </a>
             </div>
@@ -86,7 +86,7 @@
 
 <!--footer-->
 @section('footer')
-    @include('layout.footer')
+@include('layout.footer')
 @show
 <!--footer end-->
 <script src="js/bootstrap.bundle.min.js"></script>
