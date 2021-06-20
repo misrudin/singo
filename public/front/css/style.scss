@@ -129,12 +129,6 @@ button {
                     color: #F0F4F6;
                 }
 
-                &.nav-item {
-                    &.active {
-                        border-color: white;
-                    }
-                }
-
                 &:hover {
                     border-color: white;
                 }
@@ -262,6 +256,30 @@ button {
         line-height: 140%;
         color: #FFFFFF;
     }
+
+    @include xs {
+        h1 {
+            font-size: 10vmin;
+        }
+    }
+
+    @include sm {
+        h1 {
+            font-size: 10vmin;
+        }
+    }
+
+    @include md {
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    @include xl {
+        h1 {
+            font-size: 61px;
+        }
+    }
 }
 
 //achievement
@@ -330,6 +348,35 @@ button {
                 color: #303D4D;
             }
         }
+
+        @include xs {
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+            .item {
+                h5 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-items: center;
+        }
+
+        @include md {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+
+        @include lg {
+            grid-template-columns: repeat(5, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
     }
 }
 
@@ -337,6 +384,41 @@ button {
 .profile {
     .container {
         padding: 20px 100px;
+
+        .rows_profile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            justify-items: center;
+        }
+    }
+
+    @include xs {
+        .container {
+            padding: 16px;
+
+            .rows_profile {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    @include sm {
+        .container {
+            padding: 16px;
+            .rows_profile {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    @include xl {
+        .container {
+            padding: 20px 100px;
+            .rows_profile {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     }
 
     .description {
@@ -356,9 +438,9 @@ button {
     }
 
     .images {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
 
         .grid-3 {
             display: grid;
@@ -372,6 +454,37 @@ button {
             grid-template-columns: repeat(2, max-content);
             gap: 20px;
             align-items: center;
+        }
+
+        @include xs {
+            gap: 40px;
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 40px;
+            }
+        }
+
+        @include sm {
+            gap: 40px;
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 40px;
+            }
+        }
+
+        @include md {
+            gap: 20px;
+            .grid-2 {
+                grid-template-columns: repeat(2, max-content);
+                gap: 20px;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, max-content);
+                gap: 20px;
+            }
         }
 
         img {
@@ -405,6 +518,33 @@ button {
     .row-about2 {
         margin-top: 20px;
         padding: 0 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include xs {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0;
+        }
+
+        @include lg {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0;
+        }
+
+        @include xl {
+            padding: 0 50px;
+        }
 
         .col {
             img {
@@ -447,6 +587,24 @@ button {
 //news
 .news {
     margin-top: 100px;
+
+    .rows_news {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 50px;
+
+        @include xs {
+            grid-template-columns: 1fr;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+
+        @include lg {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
 
     .title {
         font-style: normal;
@@ -492,6 +650,47 @@ button {
                 color: #303D4D;
                 line-height: 180%;
                 margin: 0;
+            }
+        }
+
+        @include xs {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                height: auto;
+            }
+
+            .news-detail {
+                margin: 20px 0 0 0;
+            }
+        }
+
+        @include sm {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                height: auto;
+            }
+
+            .news-detail {
+                margin: 20px 0 0 0;
+            }
+        }
+
+        @include lg {
+            flex-direction: row;
+
+            img {
+                width: 261px;
+                height: 174px;
+            }
+
+            .news-detail {
+                margin: 0 0 0 20px;
             }
         }
     }
@@ -653,12 +852,11 @@ button {
                 box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: center;
                 align-items: center;
                 padding: 16px 25px;
                 height: 258px;
                 cursor: pointer;
-                text-decoration: none;
 
                 p {
                     font-size: 16px;
@@ -666,7 +864,6 @@ button {
                     text-align: center;
                     color: #303D4D;
                     margin: 0;
-                    font-weight: 500;
                 }
 
 
@@ -813,9 +1010,6 @@ button {
         gap: 50px;
 
         .item_publikasi {
-            cursor: pointer;
-            text-decoration: none;
-
             .image-container {
                 overflow: hidden;
                 border-radius: 8px;

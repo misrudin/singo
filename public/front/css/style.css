@@ -62,9 +62,6 @@ button.btn-primary:focus {
   line-height: 180%;
   color: #F0F4F6;
 }
-.navbar.navbar-dark .navbar-nav li.nav-item.active {
-  border-color: white;
-}
 .navbar.navbar-dark .navbar-nav li:hover {
   border-color: white;
 }
@@ -158,6 +155,26 @@ button.btn-primary:focus {
   line-height: 140%;
   color: #FFFFFF;
 }
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 10vmin;
+  }
+}
+@media (min-width: 576px) {
+  .banner h1 {
+    font-size: 10vmin;
+  }
+}
+@media (min-width: 768px) {
+  .banner h1 {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .banner h1 {
+    font-size: 61px;
+  }
+}
 
 .achievement {
   padding: 20px 0;
@@ -218,9 +235,70 @@ button.btn-primary:focus {
   line-height: 180%;
   color: #303D4D;
 }
+@media (max-width: 576px) {
+  .achievement .container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  .achievement .container .item h5 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 576px) {
+  .achievement .container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .achievement .container {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .achievement .container {
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+}
 
 .profile .container {
   padding: 20px 100px;
+}
+.profile .container .rows_profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  justify-items: center;
+}
+@media (max-width: 576px) {
+  .profile .container {
+    padding: 16px;
+  }
+  .profile .container .rows_profile {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 576px) {
+  .profile .container {
+    padding: 16px;
+  }
+  .profile .container .rows_profile {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .profile .container {
+    padding: 20px 100px;
+  }
+  .profile .container .rows_profile {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .profile .description h4 {
   font-weight: 500;
@@ -235,9 +313,9 @@ button.btn-primary:focus {
   color: #5C6F80;
 }
 .profile .images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 .profile .images .grid-3 {
   display: grid;
@@ -250,6 +328,39 @@ button.btn-primary:focus {
   grid-template-columns: repeat(2, max-content);
   gap: 20px;
   align-items: center;
+}
+@media (max-width: 576px) {
+  .profile .images {
+    gap: 40px;
+  }
+  .profile .images .grid-2, .profile .images .grid-3 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+  }
+}
+@media (min-width: 576px) {
+  .profile .images {
+    gap: 40px;
+  }
+  .profile .images .grid-2, .profile .images .grid-3 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .profile .images {
+    gap: 20px;
+  }
+  .profile .images .grid-2 {
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+  }
+  .profile .images .grid-3 {
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+  }
 }
 .profile .images img {
   cursor: pointer;
@@ -273,6 +384,38 @@ button.btn-primary:focus {
 .profile .row-about2 {
   margin-top: 20px;
   padding: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 576px) {
+  .profile .row-about2 {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+@media (min-width: 576px) {
+  .profile .row-about2 {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .profile .row-about2 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .profile .row-about2 {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .profile .row-about2 {
+    padding: 0 50px;
+  }
 }
 .profile .row-about2 .col img {
   width: 64px;
@@ -306,6 +449,26 @@ button.btn-primary:focus {
 
 .news {
   margin-top: 100px;
+}
+.news .rows_news {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+@media (max-width: 576px) {
+  .news .rows_news {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 576px) {
+  .news .rows_news {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .news .rows_news {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 .news .title {
   font-style: normal;
@@ -347,6 +510,44 @@ button.btn-primary:focus {
   color: #303D4D;
   line-height: 180%;
   margin: 0;
+}
+@media (max-width: 576px) {
+  .news .news-item {
+    flex-direction: column;
+  }
+  .news .news-item img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+  .news .news-item .news-detail {
+    margin: 20px 0 0 0;
+  }
+}
+@media (min-width: 576px) {
+  .news .news-item {
+    flex-direction: column;
+  }
+  .news .news-item img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+  .news .news-item .news-detail {
+    margin: 20px 0 0 0;
+  }
+}
+@media (min-width: 992px) {
+  .news .news-item {
+    flex-direction: row;
+  }
+  .news .news-item img {
+    width: 261px;
+    height: 174px;
+  }
+  .news .news-item .news-detail {
+    margin: 0 0 0 20px;
+  }
 }
 .news .mini-news-item {
   border-bottom: 1px solid #D2D7DB;
@@ -484,12 +685,11 @@ button.btn-primary:focus {
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 16px 25px;
   height: 258px;
   cursor: pointer;
-  text-decoration: none;
 }
 .list-logo .container-list-logo .list .item p {
   font-size: 16px;
@@ -497,7 +697,6 @@ button.btn-primary:focus {
   text-align: center;
   color: #303D4D;
   margin: 0;
-  font-weight: 500;
 }
 .list-logo .container-list-logo .list .item .spacer {
   height: 30px;
@@ -610,10 +809,6 @@ button.btn-primary:focus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
-}
-.profile-detail .row-publikasi .item_publikasi {
-  cursor: pointer;
-  text-decoration: none;
 }
 .profile-detail .row-publikasi .item_publikasi .image-container {
   overflow: hidden;

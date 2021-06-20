@@ -51,7 +51,7 @@
 <!--profile-->
 <section class="profile">
     <div class="container">
-        <div class="row g-5">
+        <div class="rows_profile">
             <div class="col description">
                 <h4>
                     Non-Government Organization <br>
@@ -119,7 +119,7 @@
                     incididunt ut labore et dolore magna aliqua</p>
             </div>
         </div>
-        <div class="row row-cols-3 g-5 row-about2">
+        <div class="row-about2">
             <div class="col">
                 <img src="{{asset('front/assets/profile/Illustration-Rencana.png')}}" alt="">
                 <h5>Rencana Kerja Tahunan</h5>
@@ -157,7 +157,7 @@
                     et dolore magna aliqua</p>
             </div>
         </div>
-        <div class="carousel-container">
+        <div class="carousel-container p-0">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -194,10 +194,10 @@
 <!--news-->
 <section class="news">
     <div class="container">
-        <div class="row row-cols-2 g-5">
-            <div class="col-md-8">
+        <div class="rows_news">
+            <main>
                 <h5 class="title">Berita</h5>
-                <div class="news-item mt-5">
+                <article class="news-item mt-5">
                     <img src="{{asset('front/assets/news/news1.png')}}" alt="News">
                     <div class="news-detail">
                         <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
@@ -213,8 +213,8 @@
                             <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
                         </div>
                     </div>
-                </div>
-                <div class="news-item mt-5">
+                </article>
+                <article class="news-item mt-5">
                     <img src="{{asset('front/assets/news/news2.png')}}" alt="News">
                     <div class="news-detail">
                         <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
@@ -230,8 +230,8 @@
                             <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
                         </div>
                     </div>
-                </div>
-                <div class="news-item mt-5">
+                </article>
+                <article class="news-item mt-5">
                     <img src="{{asset('front/assets/news/news3.png')}}" alt="News">
                     <div class="news-detail">
                         <h5 class="news-title">Odio eu feugiat pretium nibh ipsum. Adipiscing commo elit at imperdiet
@@ -247,33 +247,33 @@
                             <img src="{{asset('front/assets/icons/right.png')}}" alt="Selengkapnya">
                         </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </main>
 
-            <div class="col-6 col-md-4">
+            <aside>
                 <h5 class="title mb-5">Kisah Sukses</h5>
-                <div class="mini-news-item mt-3">
+                <article class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Adipiscing at in tellus integer feugiat scelerisque varius</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
+                </article>
+                <article class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
+                </article>
+                <article class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Id leo in vitae turpis massa sed elementum tempus</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
+                </article>
+                <article class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Etiam dignissim diam quis enim lobortis</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-                <div class="mini-news-item mt-3">
+                </article>
+                <article class="mini-news-item mt-3">
                     <h5 class="mini-news-title">Elementum facilisis leo vel fringilla est ullamcorper eget nulla
                         facilisi</h5>
                     <p class="mini-news-date mt-2">31 Maret 2021</p>
-                </div>
-            </div>
+                </article>
+            </aside>
         </div>
     </div>
 </section>
