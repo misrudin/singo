@@ -1,5 +1,5 @@
 @section('detailheader')
-    @include('layout.detailheader')
+@include('layout.detailheader')
 @show
 <!--banner-->
 <section style="background-image: url({{url('front/assets/images/bg-dokumen.png')}})"
@@ -48,7 +48,7 @@
     </div>
 </section>
 <!--end of banner-->
-<section class="document-found">
+<section class="document-found" id="document-found">
     <div class="container py-5">
         <h1 class="title">Hasil pencarian</h1>
         <div class="documents mt-4">
@@ -83,46 +83,56 @@
 
 @section('margin', 'm-0')
 @section('footer')
-    @include('layout.footer')
+@include('layout.footer')
 @show
 <!--footer end-->
 
 
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('.select-ngo').select2({
             minimumResultsForSearch: -1,
-            dropdownCssClass: "dropdown",
-            selectionCssClass: "selected-ngo"
+            dropdownCssClass: 'dropdown',
+            selectionCssClass: 'selected-ngo',
         });
 
         $('b[role="presentation"]').hide();
         $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
 
-
         //animasi
-        $('#buttonSearch').click(function () {
-            const container = $('#container')
-            container.removeClass('col-md-5')
-            container.addClass('col-md-12')
+        $('#buttonSearch').click(function() {
 
-            const formDoc = $('#form-document')
-            formDoc.addClass('full')
-            formDoc.animate({
-                marginBottom: '50px',
-            }, 700)
+            const screenW = $(window).width();
+            const container = $('#container');
+            container.removeClass('col-md-5');
+            container.addClass('col-md-12');
 
-            const ngoContainer = $('#ngo-container')
-            ngoContainer.removeClass('col-12')
-            ngoContainer.addClass('col-6')
+            const formDoc = $('#form-document');
+            formDoc.addClass('full');
 
-            $('.banner-2').animate({
-                height: '150px',
-            }, 300)
+            if (screenW > 768) {
+                formDoc.animate({
+                    marginBottom: '50px',
+                }, 700);
+            }
 
-            $('.banner-2').addClass('found')
-            $('.document-found').show()
-        })
+            const ngoContainer = $('#ngo-container');
+            ngoContainer.removeClass('col-12');
+            ngoContainer.addClass('col-6');
+
+            $('.banner-2').addClass('found');
+            $('.document-found').show();
+
+            if (screenW > 768) {
+                $('.banner-2').animate({
+                    height: '150px',
+                }, 300);
+            } else {
+                $('html, body').animate({
+                    scrollTop: $('#document-found').offset().top - 30,
+                }, 100);
+            }
+        });
     });
 </script>
 </body>

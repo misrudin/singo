@@ -1,7 +1,7 @@
 @section('title', 'Beranda')
 
 @section('detailheader')
-    @include('layout.detailheader')
+@include('layout.detailheader')
 @show
 
 <!-- back-action -->
@@ -24,9 +24,9 @@
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <div class="address-detail">
-                    <img src="{{asset('front/assets/navbar/'. $name .'.svg')}}" alt="Logo">
+                    <img src="{{asset('front/assets/navbar/'. $name .'.svg')}}" class="logo" alt="Logo">
                     <div class="detail">
-                        <h1 class="text-capitalize">{{$name}}</h1>
+                        <h1>Rikolto</h1>
                         <div class="item">
                             <img src="{{asset('front/assets/icons/feather_map-pin.svg')}}" alt="Map">
                             <p>Jl. Tukad Unda VIII No.10b, Panjer, Kec. Denpasar Selatan, Kota Denpasar, Bali 80225</p>
@@ -36,7 +36,7 @@
                                 <img src="{{asset('front/assets/icons/feather_mail.svg')}}" alt="Main">
                                 <p>contact@asbindonesia.org</p>
                             </div>
-                            <div class="item ms-4">
+                            <div class="item">
                                 <img src="{{asset('front/assets/icons/feather_globe.svg')}}" alt="Globe">
                                 <p>https://www.asbindonesia.org/</p>
                             </div>
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-cols-3 g-5 mt-1 grid-news">
+                        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-5 mt-1 grid-news">
                             <div class="col news-item">
                                 <img src="{{asset('front/assets/news/news1.png')}}" alt="News">
                                 <h4 class="title mt-2">Quis vel eros donec acodio tempor orci dapibus icul...</h4>
@@ -145,6 +145,7 @@
                             </div>
                         </div>
                     </div>
+
                     <h5 class="title mt-5">Berita</h5>
                     <div class="line"></div>
                     <div class="main-content mt-4">
@@ -160,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-cols-3 g-5 mt-1 grid-news">
+                        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-5 mt-1 grid-news">
                             <div class="col news-item">
                                 <img src="{{asset('front/assets/news/image%2031.png')}}" alt="News">
                                 <h4 class="title mt-2">Quis vel eros donec acodio tempor orci dapibus icul...</h4>
@@ -198,7 +199,7 @@
 <!--profile detail end-->
 
 @section('footer')
-    @include('layout.footer')
+@include('layout.footer')
 @show
 </body>
 </html>

@@ -20,8 +20,8 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-9">
-                <div class="row row-cols-2 g-5">
-                    <div class="col-md-4 detail-publikasi">
+                <div class="row_detail_publikasi">
+                    <div class="detail-publikasi">
                         <img src="{{asset('front/assets/publikasi/' . $id . '.png')}}" alt="Publikasi">
                         <div class="item-detail-publikasi mt-3">
                             <img class="icon-publikasi" src="{{asset('front/assets/icons/feather_calendar.svg')}}"
@@ -42,7 +42,7 @@
                         </div>
                         <button class="btn btn-primary d-block mt-4" style="width: 100%">Unduh</button>
                     </div>
-                    <div class="col-md-8 detail-publikasi-description">
+                    <div class="detail-publikasi-description">
                         <h1>It Ends With Us</h1>
                         <div class="user-publikasi mt-2">
                             <img src="{{asset('front/assets/icons/feather_user.svg')}}" alt="User">

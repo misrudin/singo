@@ -207,6 +207,36 @@ button {
             &.full {
                 grid-template-columns: repeat(4, 1fr);
             }
+
+            @include xs {
+                grid-template-columns: 1fr;
+                .col-12 {
+                    grid-column: auto;
+                }
+                &.full {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            @include sm {
+                grid-template-columns: 1fr;
+                .col-12 {
+                    grid-column: auto;
+                }
+                &.full {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            @include md {
+                grid-template-columns: 1fr 1fr;
+                .col-12 {
+                    grid-column: span 2;
+                }
+                &.full {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
         }
     }
 
@@ -224,6 +254,18 @@ button {
     &.found {
         .title-container {
             display: none;
+
+            @include xs {
+                display: block;
+            }
+
+            @include sm {
+                display: block;
+            }
+
+            @include md {
+                display: none;
+            }
         }
     }
 
@@ -406,6 +448,7 @@ button {
     @include sm {
         .container {
             padding: 16px;
+
             .rows_profile {
                 grid-template-columns: 1fr;
             }
@@ -415,6 +458,7 @@ button {
     @include xl {
         .container {
             padding: 20px 100px;
+
             .rows_profile {
                 grid-template-columns: 1fr 1fr;
             }
@@ -847,40 +891,75 @@ button {
             .item {
                 margin-bottom: 30px;
                 break-inside: avoid;
-                border-radius: 8px;
-                background: #FFFFFF;
-                box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 16px 25px;
+                padding: 2px;
                 height: 258px;
-                cursor: pointer;
 
-                p {
-                    font-size: 16px;
-                    line-height: 180%;
-                    text-align: center;
-                    color: #303D4D;
-                    margin: 0;
+                a {
+                    border-radius: 8px;
+                    background: #FFFFFF;
+                    box-shadow: 0 0 5px 0 rgba(#000, .1);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 16px 25px;
+                    cursor: pointer;
+                    height: 100%;
+                    text-decoration: none;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 180%;
+                        text-align: center;
+                        color: #303D4D;
+                        margin: 0;
+                        font-weight: 500;
+                    }
+
+
+                    .spacer {
+                        height: 30px;
+                    }
+
+                    img {
+                        max-width: 126px;
+                        display: block;
+                        grid-row: 1 / -1;
+                        grid-column: 1;
+                        object-fit: contain;
+                    }
                 }
+            }
 
+            @include xs {
+                column-count: 1;
 
-                .spacer {
-                    height: 30px;
+                .item {
+                    &.dummy {
+                        display: none;
+                    }
                 }
+            }
 
-                img {
-                    max-width: 126px;
-                    display: block;
-                    grid-row: 1 / -1;
-                    grid-column: 1;
-                    object-fit: contain;
+            @include sm {
+                column-count: 2;
+
+                .item {
+                    &.dummy {
+                        display: none;
+                    }
+                }
+            }
+            @include md {
+                column-count: 3;
+
+                .item {
+                    &.dummy {
+                        display: block;
+                    }
                 }
             }
         }
-
     }
 }
 
@@ -1004,62 +1083,6 @@ button {
 
 .profile-detail {
 
-    .row-publikasi {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-
-        .item_publikasi {
-            .image-container {
-                overflow: hidden;
-                border-radius: 8px;
-                border: 1px solid #E5E5E5;
-                box-sizing: border-box;
-
-                img {
-                    width: 100%;
-                    object-fit: contain;
-                    box-sizing: border-box;
-                    cursor: pointer;
-                    transition: .3s ease .1s;
-                }
-
-                &:hover {
-                    img {
-                        transform: scale(1.05);
-                    }
-                }
-            }
-
-            h4 {
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 140%;
-                color: #303D4D;
-                margin: 0;
-            }
-
-            p {
-                font-size: 16px;
-                line-height: 180%;
-                color: #5C6F80;
-                margin: 0;
-            }
-        }
-
-        @include xs {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        @include sm {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include lg {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
     .title {
         font-weight: 500;
         font-size: 20px;
@@ -1115,6 +1138,7 @@ button {
                     font-size: 16px;
                     line-height: 180%;
                     color: #5C6F80;
+                    margin: 0;
                 }
             }
         }
@@ -1145,8 +1169,88 @@ button {
     }
 }
 
+//row publikasi
+.row-publikasi {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    .item_publikasi {
+        text-decoration: none;
+        .image-container {
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #E5E5E5;
+            box-sizing: border-box;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                box-sizing: border-box;
+                cursor: pointer;
+                transition: .3s ease .1s;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        h4 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 140%;
+            color: #303D4D;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 180%;
+            color: #5C6F80;
+            margin: 0;
+        }
+    }
+
+    @include xs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 //news detail
+.row-detail-news {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 50px;
+
+    @include xs {
+        grid-template-columns: 1fr;
+    }
+
+    @include sm {
+        grid-template-columns: 1fr;
+    }
+
+    @include lg {
+        grid-template-columns: 1fr 350px;
+    }
+
+    @include xl {
+        grid-template-columns: 1fr 400px;
+    }
+}
+
 .detail-news {
     .title {
         font-weight: 500;
@@ -1221,6 +1325,27 @@ button {
 }
 
 //detail publikasi
+.row_detail_publikasi {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+
+    @include xs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    @include sm {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    @include lg {
+        grid-template-columns: 300px 1fr;
+        gap: 50px;
+    }
+}
+
 .detail-publikasi {
     img {
         width: 100%;
@@ -1352,6 +1477,21 @@ button {
                 height: 93px;
                 object-fit: contain;
             }
+        }
+
+        @include xs {
+            grid-template-columns: 1fr;
+        }
+        @include sm {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include md {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include lg {
+            grid-template-columns: repeat(5, 1fr);
         }
     }
 }

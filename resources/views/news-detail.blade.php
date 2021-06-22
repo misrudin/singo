@@ -4,8 +4,8 @@
 <div style="height: 50px"></div>
 <!--content-->
 <div class="container">
-    <div class="row row-cols-2 g-5">
-        <div class="col-md-8">
+    <div class="row-detail-news">
+        <div class="col">
             <!-- back-action -->
             <div class="back-action">
                 <a class="back-button" href="{{ url('/'. $name .'') }}">
@@ -52,7 +52,7 @@
             </div>
             <!--detail end-->
         </div>
-        <div class="col-md-4 sidebar-right">
+        <aside class="sidebar-right">
             <h4 class="title">Kisah Sukses Lainnya</h4>
             <div class="line"></div>
             <div class="news-item-sidebar mt-4">
@@ -79,7 +79,7 @@
             <div class="d-flex justify-content-end mt-5">
                 <button class="btn btn-primary">Lihat semua kisah sukses</button>
             </div>
-        </div>
+        </aside>
     </div>
 </div>
 <!--content end-->
